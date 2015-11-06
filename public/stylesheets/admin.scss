@@ -1,0 +1,121 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "variables";
+@import "header";
+@import "manage-movies";
+@import "film-edit-page";
+
+.container-fluid {
+  max-width: $max-body-width;
+  .content {
+    margin-top: 20px;
+    background-size: cover;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+  }
+
+  .top-nav-module {
+    .tabs {
+      text-align: center;
+      max-width: $max-body-width;
+      padding: 0;
+      margin: 12px auto 0;
+      border-radius: $global-border-radius;
+      overflow: hidden;
+
+      @include clearfix;
+    }
+
+    .tab {
+      list-style: none;
+      float: left;
+      text-align: center;
+      border-right: 1px solid #747474;
+      background: linear-gradient(0deg, #333333, #5c5c5c);
+      width: 20%;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .tab-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font: bold 18px 'Unica One', sans-serif;
+        color: #adadad;
+        display: block;
+        padding: 6px 0;
+        text-shadow: none;
+        transition: text-shadow .2s ease-in;
+
+        &:hover, &.tab-active {
+          background: linear-gradient(0deg, #C53720, #AE1C24);
+          color: #ffffff;
+          text-decoration: none;
+          text-shadow: 1px 1px 2px #671b1b, 0 0 1em #320d0d;
+        }
+
+        &.tab-active {
+          cursor: default;
+        }
+      }
+    }
+
+    .tab-content {
+      display: none;
+      position: relative;
+      text-align: center;
+      max-width: $max-body-width;
+      padding: 0;
+      margin: 12px auto 0;
+      border-radius: $global-border-radius;
+      overflow: hidden;
+      background-size: cover;
+      background-color: #2f2f2f;
+      height: 600px;
+
+      &.active-tab {
+        display: block;
+      }
+    }
+
+  }
+
+}
+
+.footer-block {
+  //height: 185px;
+  margin: 1em -15px 0;
+  text-align: center;
+  background: linear-gradient(0deg, #333333, #5c5c5c);
+
+  .footer {
+    padding-top: 20px;
+
+    .footer-list {
+      border-top: solid #999999 1px;
+      border-bottom: solid #999999 1px;
+      //height: 50%;
+
+      .footer-list-item {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 0;
+      }
+    }
+    .footer-copy {
+      color: #999999;
+      font-size: 1em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 20px;
+      padding-bottom: 1em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#element_to_pop_up {
+  display: none;
+}
+
+
+

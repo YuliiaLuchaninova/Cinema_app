@@ -1,0 +1,237 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
+<!--<title>Admin</title>-->
+<!--<link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>-->
+<!--<link href="../../styles/admin.css" rel="stylesheet">-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<div class="page">-->
+
+<!--<div class="container-fluid">-->
+<!--<header class="row header">-->
+<!--<a class="logo-link" href="/">-->
+<!--<h1 class="logo">Cinema</h1>-->
+<!--</a>-->
+<!--<a class="logout" href="/">Log out</a>-->
+
+<!--<a class="my-profile-watch" href="../myProfile.jsp">My Profile</a>-->
+
+<!--</header>-->
+
+<div class="row">
+    <div class="row top-nav-module">
+        <ul class="tabs">
+            <li class="tab-active manage-movies tab">
+                <a href="#manageMovies" class="tab-link">Manage Movies</a>
+            </li>
+
+            <li class="schedule tab">
+                <a href="#schedule" class="tab-link">Schedule</a>
+            </li>
+
+            <li class="users tab">
+                <a href="#users" class="tab-link">Manage Users</a>
+            </li>
+
+            <li class="booking tab">
+                <a href="#booking" class="tab-link">Manage Booking</a>
+            </li>
+
+            <li class="my-profile tab">
+                <a href="#myProfile" class="tab-link">My Profile</a>
+            </li>
+        </ul>
+        <section id="manageMovies" class="active-tab tab-content">
+            <a href="/film-edit-page" class="btn btn-success add-film">Add new film</a>
+            <ul class="film-list">
+                <!--TODO: Add loop to render all movies on the page-->
+                <li id="movie-id-1" class="film-item">
+                    <h2 class="film-title">
+                        Best film ever
+                    </h2>
+
+                    <img src="http://media.moviemanager.biz/movies/99-Homes_25692_posterbgnd.jpg" alt=""
+                         class="film-avatar"/>
+
+                    <div class="premier-date">
+                        20 December 2015
+                    </div>
+
+                    <div class="ctrl-block">
+                        <a href="/film-edit-page" class="btn film-edit">
+                            Edit
+                        </a>
+
+                        <button class="btn film-remove">
+                            Remove
+                        </button>
+                    </div>
+                </li>
+
+                <li id="movie-id-2" class="film-item">
+                    <h2 class="film-title">
+                        Best film ever #2
+                    </h2>
+
+                    <img src="http://media.moviemanager.biz/movies/Black-Mass_25470_posterbgnd.jpg" alt=""
+                         class="film-avatar"/>
+
+                    <div class="premier-date">
+                        10 January 2016
+                    </div>
+
+                    <div class="ctrl-block">
+                        <a href="#path-to-the-movie-2-page" class="btn film-edit">
+                            Edit
+                        </a>
+                        <button class="btn film-remove">
+                            Remove
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="genres" class="tab-content">
+            <p>This will install Sass and any dependencies for you. It's pretty magical. If you get an error
+                message0000 then
+                it's likely you will need to use the sudo command to install the Sass gem. It would look
+                ggggggggggggglikehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh:2222222
+                22222222222222222222222222222222222222222222222222222222222222</p>
+        </section>
+        <section id="schedule" class="tab-content">
+            <p>u will need to use the sudo command to install the Sass gem. It would look like:</p>
+        </section>
+        <section id="users" class="tab-content">
+            <p>This:</p>
+        </section>
+        <section id="booking" class="tab-content">
+            <p>This will need to use the sudo command to install the Sass gem. It would look like:</p>
+        </section>
+        <section id="myProfile" class="tab-content">
+            <h1 class="page-title">Admin</h1>
+
+            <div class="content row">
+                <div class="col-xs-4">
+
+                    <img src="../../images/Mexican-Boss-icon.png" alt="admin-logo"
+                         class="admin-poster"/>
+                </div>
+                <div class="col-xs-6 editing-block">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="title" class="col-xs-4 control-label edit-form-label">Name</label>
+
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control price" id="title">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="surname" class="col-xs-4 control-label edit-form-label">Surname</label>
+
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control duration" id="surname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-xs-4 control-label edit-form-label">Birthday</label>
+
+                            <div class="col-xs-8">
+                                <input type="date" class="form-control date" id="date"
+                                       placeholder="choose a date">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-xs-4 control-label edit-form-label">E-mail</label>
+
+                            <div class="col-xs-8">
+                                <input type="email" class="form-control actors" id="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword1"
+                                   class="col-xs-4 control-label edit-form-label">Password</label>
+
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" id="inputPassword1"
+                                       placeholder="*******">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword1" class="col-xs-4 control-label edit-form-label">Confirm
+                                password</label>
+
+                            <div class="col-xs-8">
+                                <input type="password" class="form-control" id="inputPassword1"
+                                       placeholder="*******">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <button type="submit" class="btn btn-default edit-form-delete-film">Delete
+                                </button>
+                                <button type="submit" class="btn btn-default edit-form-save-changes">Save
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!--<footer class="footer-block">-->
+<!--<div class="footer">-->
+<!--<ul class="footer-list">-->
+<!--<li class="footer-list-item">-->
+<!--<a href="http://www.dtcinemas.co.nz/">-->
+<!--<img src="../../images/cg_palmerston_rev.png" alt="">-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li class="footer-list-item">-->
+<!--<a href="http://www.dtcinemas.co.nz/">-->
+<!--<img src="../../images/cg_palmerston_rev.png">-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li class="footer-list-item">-->
+<!--<a href="http://www.dtcinemas.co.nz/">-->
+<!--<img src="../../images/dt_palmerston_rev.png">-->
+<!--</a>-->
+<!--</li>-->
+
+<!--<li class="footer-list-item">-->
+<!--<a href="http://www.dtcinemas.co.nz/">-->
+<!--<img src="../../images/dt_palmerston_rev.png">-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--<p class="footer-copy">-->
+<!--Lublin 2015 <br>-->
+<!--Oleh Muts, Vladyslav Tehlivets, Yuliia Luchaninova, Mateusz Jaruga, Andrzej Materniak, Michal Debski-->
+<!--</p>-->
+<!--</div>-->
+
+
+<!--</footer>-->
+
+
+<!--</div>-->
+<!--</div>-->
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bPopup/jquery.bpopup.min.js"></script>
+<script src="/javascripts/tabNavigation.js"></script>
+
+
+<!--</body>-->
+<!--</html>-->

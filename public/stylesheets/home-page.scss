@@ -1,0 +1,267 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "kidz-club";
+@import "candybar";
+@import "today";
+@import "tomorrow";
+@import "all-week";
+@import "coming-soon";
+@import "about-us";
+@import "variables";
+@import "news-letter";
+
+$max-body-width: 980px;
+$global-border-radius: 10px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/Abstract%20light%20textures%20-3%20by%20DiZa%20(2).jpg") 0 0 no-repeat transparent;
+  background-size: cover;
+}
+
+.page {
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: $max-body-width;
+
+  .header {
+    background: url("../images/top1-bgnd_130.png") 0 0 no-repeat;
+    margin-top: 15px;
+    background-size: cover;
+    border-radius: $global-border-radius;
+    padding-top: 10px;
+    padding-bottom: 0;
+
+    .logo-link {
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .logo {
+      background: url("../images/dt_logo.png") 0 0 no-repeat transparent;
+      color: transparent;
+      line-height: 76px;
+    }
+
+    .login,
+    .register {
+      position: relative;
+      left: 80%;
+      top: -110px;
+      background-color: inherit;
+      border-radius: 4px;
+      color: #adadad;
+      font: bold 18px 'Unica One', sans-serif;
+      padding: 3px;
+      text-decoration: none;
+
+      &:hover {
+        background: linear-gradient(0deg, #333333, #5c5c5c);
+        border: solid 1px #5c5c5c;
+        border-radius: 4px;
+        color: #ca1e28;
+      }
+    }
+  }
+
+  .navigator {
+    .main-menu {
+      text-align: center;
+      max-width: $max-body-width;
+      padding: 0;
+      margin: 12px auto 0;
+      border-radius: $global-border-radius;
+      overflow: hidden;
+
+      @include clearfix;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      text-align: center;
+      border-right: 1px solid #747474;
+      background: linear-gradient(0deg, #333333, #5c5c5c);
+      width: 16.65%;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      a {
+        text-decoration: none;
+        font: bold 18px 'Unica One', sans-serif;
+        color: #adadad;
+        display: block;
+        padding: 6px 0;
+        text-shadow: none;
+        transition: text-shadow .2s ease-in;
+
+        &:hover {
+          background: linear-gradient(0deg, #C53720, #AE1C24);
+          color: #ffffff;
+          text-decoration: none;
+          text-shadow: 1px 1px 2px #671b1b, 0 0 1em #320d0d;
+        }
+      }
+    }
+  }
+
+  .content {
+    $slider-max-height: 310px;
+
+    border-radius: $global-border-radius;
+    margin-top: 12px;
+    overflow: hidden;
+    padding: 0;
+    max-width: 980px;
+    max-height: $slider-max-height;
+    background-color: #090909;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @include clearfix;
+
+    .aslider {
+      height: $slider-max-height;
+      border-radius: $global-border-radius;
+      overflow: hidden;
+
+      .aslide {
+        cursor: move;
+        position: absolute;
+        overflow: hidden;
+        border-radius: $global-border-radius;
+        padding: 2px 0;
+        width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .links {
+      .link {
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0 -12px;
+        position: relative;
+        text-align: center;
+        line-height: 22px;
+        color: #FF9900;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: block;
+        max-height: $slider-max-height/2;
+
+        &:hover {
+          span, .link-img {
+            opacity: 1.0;
+          }
+        }
+
+        span, .link-img {
+          opacity: 0.4;
+          transition: opacity .3s ease-in;
+        }
+
+        span {
+          background-color: #090909;
+          display: block;
+          position: absolute;
+          border-radius: $global-border-radius/2;
+          bottom: 0;
+          max-width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
+          padding: 0 5px;
+        }
+
+        .link-img {
+          border-radius: $global-border-radius;
+          width: 100%;
+          max-height: $slider-max-height/2-5;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .baby, .about {
+      padding: 2px 0 3px 0;
+    }
+  }
+}
+
+.this-week {
+  font-family: 'Unica One', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main {
+  position: relative;
+  text-align: center;
+  max-width: $max-body-width;
+  padding: 0;
+  margin: 12px -15px 0;
+  border-radius: $global-border-radius;
+  overflow: hidden;
+  background-size: cover;
+  background-color: #090909;
+  height: 600px;
+
+  .fb-like {
+    left: 40%;
+  }
+
+  @include clearfix;
+}
+
+.footer-block {
+  //height: 185px;
+  margin: 1em -15px 0;
+  text-align: center;
+  background: linear-gradient(0deg, #333333, #5c5c5c);
+
+  .footer {
+    padding-top: 20px;
+
+    .footer-list {
+      border-top: solid #999999 1px;
+      border-bottom: solid #999999 1px;
+      //height: 50%;
+
+      .footer-list-item {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 0;
+      }
+    }
+    .footer-copy {
+      color: #999999;
+      font-size: 1em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 20px;
+      padding-bottom: 1em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+

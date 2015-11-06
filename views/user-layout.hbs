@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/home-page.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="page">
+    <div id="fb-root"></div>
+
+    <div class="container-fluid">
+        <header class="row header">
+            <a class="logo-link" href="/home-page">
+                <h1 class="logo">Cinema</h1>
+            </a>
+
+            <a class="login" href="../views/logIn-Form.jsp">Log in</a>
+
+            <a class="register" href="../views/Register-Form.jsp">Register</a>
+        </header>
+        <div class="row">
+            <nav class="navigator">
+                <ul class="main-menu">
+                    <li class="tab-active"><a href="/home-page">HOME</a></li>
+                    <li><a href="/today">TODAY</a></li>
+                    <li><a href="/tomorrow">TOMORROW</a></li>
+                    <li><a href="/all-week">ALL WEEK</a></li>
+                    <li><a href="/coming-soon">COMING SOON</a></li>
+                    <li><a href="/about-us">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        {{{body}}}
+    </div>
+    <footer class="footer-block">
+        <div class="footer">
+            <ul class="footer-list">
+                <li class="footer-list-item">
+                    <a href="http://www.dtcinemas.co.nz/">
+                        <img src="../images/cg_palmerston_rev.png" alt="">
+                    </a>
+                </li>
+
+                <li class="footer-list-item">
+                    <a href="http://www.dtcinemas.co.nz/">
+                        <img src="../images/cg_palmerston_rev.png">
+                    </a>
+                </li>
+
+                <li class="footer-list-item">
+                    <a href="http://www.dtcinemas.co.nz/">
+                        <img src="../images/dt_palmerston_rev.png">
+                    </a>
+                </li>
+
+                <li class="footer-list-item">
+                    <a href="http://www.dtcinemas.co.nz/">
+                        <img src="../images/dt_palmerston_rev.png">
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer-copy">
+                Lublin 2015 <br>
+                Oleh Muts, Vladyslav Tehlivets, Yuliia Luchaninova, Mateusz Jaruga, Andrzej Materniak, Michal Debski
+            </p>
+        </div>
+    </footer>
+    templateScripts
+</div>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+{{{script}}}
+<!--template specific scripts-->
+
+</body>
+</html>

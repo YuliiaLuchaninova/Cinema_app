@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/page-bgnd2.jpg") 0 0 no-repeat transparent;
+  background-size: cover;
+}
+
+.page {
+  padding: 0 15px;
+}
+
+.header {
+  background: url("../images/top1-bgnd_130.png") 0 0 no-repeat;
+  margin-top: 15px;
+  background-size: cover;
+  border-radius: $global-border-radius;
+  padding-top: 10px;
+  padding-bottom: 0;
+
+  .logo-link {
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .logo {
+    background: url("../images/dt_logo.png") 0 0 no-repeat transparent;
+    color: transparent;
+    line-height: 76px;
+  }
+  .logout,
+  .my-profile-watch {
+    position: relative;
+    left: 80%;
+    top: -110px;
+    background-color: inherit;
+    border-radius: 4px;
+    color: #adadad;
+    font: bold 18px 'Unica One', sans-serif;
+    padding: 3px;
+    text-decoration: none;
+
+    &:hover {
+      background: linear-gradient(0deg, #333333, #5c5c5c);
+      border: solid 1px #5c5c5c;
+      border-radius: 4px;
+      color: #ca1e28;
+    }
+  }
+}

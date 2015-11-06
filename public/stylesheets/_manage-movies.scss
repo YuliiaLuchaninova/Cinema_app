@@ -1,0 +1,35 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-mincer";
+
+.film-list {
+  color: #adadad;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  @include clearfix;
+}
+
+.film-item {
+  @include make-xs-column(6, 0px);
+  .film-title {
+
+  }
+
+  .film-avatar {
+
+  }
+
+  .premier-date {
+
+  }
+
+  .ctrl-block {
+    .film-edit {
+
+    }
+
+    .film-remove {
+
+    }
+  }
+}

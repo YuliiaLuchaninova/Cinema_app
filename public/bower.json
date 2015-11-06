@@ -1,0 +1,25 @@
+{
+  "name": "Cinema",
+  "homepage": "https://github.com/YuliiaLuchaninova/Cinema",
+  "authors": [
+    "Julia <y.luchaninova@gmail.com>"
+  ],
+  "description": "DataArt IT-school project",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "jquery-ui": "git://github.com/jquery/jquery-ui.git#~1.11.4",
+    "bxslider-4": "git://github.com/stevenwanderski/bxslider-4.git#~4.2.5",
+    "a-slider": "git://github.com/varunnaik/A-Slider.git#~0.9.1",
+    "bPopup": "git://github.com/dinbror/bpopup.git#~0.11.0"
+  }
+}

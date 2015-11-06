@@ -1,0 +1,102 @@
+<!--<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Cinema</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+    <link href="../public/stylesheets/home-page.css" rel="stylesheet">
+</head>
+<body>-->
+
+
+<div class="content row">
+    <div class="aslider col-xs-8" data-hide-controls="true">
+        {{#each slides}}
+            <div class="aslide" data-duration="12">
+                <img src="{{src}}" alt="an image"/>
+            </div>
+        {{else}}
+            //if array empty
+        {{/each}}
+        <!--<div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-141392311894.png" alt="an image"/>
+        </div>
+        <div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-144236725384.png" alt="an image"/>
+        </div>
+        <div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-144408086885.jpg" alt="an image"/>
+        </div>
+        <div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-144529350598.png" alt="an image"/>
+        </div>
+        <div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-144547121532.jpg" alt="an image"/>
+        </div>
+        <div class="aslide" data-duration="12">
+            <img src="/images/films_images/banner-upload-144547158124.png" alt="an image"/>
+        </div>-->
+    </div>
+
+    <div class="links col-xs-2">
+        <a href="/kidz-club" class="baby link">
+            <img class="link-img" src="/images/barney.jpg">
+            <span>Barney KidZ Club</span>
+        </a>
+
+        <a href="/candy-bar" class="candy link">
+            <img src="/images/Popcorn.jpg" class="link-img">
+            <span>Candy bar</span>
+        </a>
+    </div>
+
+    <div class="links col-xs-2">
+        <a href="/about-us" class="about link">
+            <img src="/images/map.jpg" class="link-img">
+            <span>Find us</span>
+        </a>
+
+        <a href="/news-letter" class="news link">
+            <img src="/images/email.jpg" class="link-img">
+            <span>Newsletter</span>
+        </a>
+    </div>
+
+</div>
+
+<header>
+    <h1 class="this-week">
+        What's on this week
+    </h1>
+</header>
+
+<main class="main row">
+    <div class="col-xs-12 movie-list">
+        <div class="fb-like"
+             data-href="https://developers.facebook.com/docs/plugins/"
+             data-width="300"
+             data-layout="button_count"
+             data-action="like"
+             data-show-faces="true"
+             data-share="true"></div>
+    </div>
+</main>
+<!--<script src="/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="/bower_components/a-slider/aslider.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascript/bootstrap.min.js"></script>
+
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!--
+
+</body>
+</html>-->

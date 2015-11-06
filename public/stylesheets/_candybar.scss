@@ -1,0 +1,14 @@
+.candy-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+
+  .food {
+    position: absolute;
+    cursor: pointer;
+    width: 20%;
+    max-height: 200px;
+    left: 10px;
+
+  }
+}
