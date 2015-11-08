@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background: url("../images/page-bgnd2.jpg") 0 0 no-repeat transparent;
+  background: url("../images/Abstract%20bright%20light.jpg") 0 0 no-repeat transparent;
   background-size: cover;
 }
 
@@ -12,45 +12,60 @@ body {
   padding: 0 15px;
 }
 
-.header {
-  background: url("../images/top1-bgnd_130.png") 0 0 no-repeat;
-  margin-top: 15px;
-  background-size: cover;
-  border-radius: $global-border-radius;
-  padding-top: 10px;
-  padding-bottom: 0;
+.header-block {
+  background: linear-gradient(0deg, #072411, #059407);
+  margin: 0 -15px;
 
-  .logo-link {
-    text-decoration: none;
-    display: block;
+  .header {
+    max-width: $max-body-width;
+    padding: 0 15px 15px;
+    margin: 0 auto;
 
-    &:hover {
+    .logo-link {
       text-decoration: none;
+      display: inline-block;
+      max-width: 329px;
+      width: 100%;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
-  }
 
-  .logo {
-    background: url("../images/dt_logo.png") 0 0 no-repeat transparent;
-    color: transparent;
-    line-height: 76px;
-  }
-  .logout,
-  .my-profile-watch {
-    position: relative;
-    left: 80%;
-    top: -110px;
-    background-color: inherit;
-    border-radius: 4px;
-    color: #adadad;
-    font: bold 18px 'Unica One', sans-serif;
-    padding: 3px;
-    text-decoration: none;
+    .logo {
+      background: url("../images/blaqqcat-copy.png") 0 0 no-repeat transparent;
+      background-size: contain;
+      color: transparent;
+      line-height: 110px;
+      margin: 0;
+    }
+    .star{
+      background: url("../images/star_cluster.png") 0 0 no-repeat transparent;
+      background-size: contain;
+      color: transparent;
+      margin: 0;
+      position: absolute;
+      left:16%;
+      top:0;
+      font-size: 100px;
+    }
 
-    &:hover {
-      background: linear-gradient(0deg, #333333, #5c5c5c);
-      border: solid 1px #5c5c5c;
+    .login,
+    .register {
+      position: relative;
+      left: 50%;
+      background-color: inherit;
       border-radius: 4px;
-      color: #ca1e28;
+      color: #adadad;
+      font: bold 18px 'Unica One', sans-serif;
+      padding: 3px;
+      text-decoration: none;
+
+      &:hover {
+        background: linear-gradient(0deg, #F4982F, #592d0b);
+        border-radius: 4px;
+
+      }
     }
   }
 }

@@ -18,28 +18,27 @@ html, body {
 }
 
 body {
-  background: url("../images/Abstract%20light%20textures%20-3%20by%20DiZa%20(2).jpg") 0 0 no-repeat transparent;
-  background-size: cover;
+  background: url("../images/Abstract%20bright%20light.jpg") 0 0 no-repeat transparent;
 }
 
 .page {
   padding: 0 15px;
 }
 
-.container-fluid {
-  max-width: $max-body-width;
+.header-block {
+  background: linear-gradient(0deg, #072411, #059407);
+  margin: 0 -15px;
 
   .header {
-    background: url("../images/top1-bgnd_130.png") 0 0 no-repeat;
-    margin-top: 15px;
-    background-size: cover;
-    border-radius: $global-border-radius;
-    padding-top: 10px;
-    padding-bottom: 0;
+    max-width: $max-body-width;
+    padding: 0 15px 15px;
+    margin: 0 auto;
 
     .logo-link {
       text-decoration: none;
-      display: block;
+      display: inline-block;
+      max-width: 329px;
+      width: 100%;
 
       &:hover {
         text-decoration: none;
@@ -47,16 +46,27 @@ body {
     }
 
     .logo {
-      background: url("../images/dt_logo.png") 0 0 no-repeat transparent;
+      background: url("../images/blaqqcat-copy.png") 0 0 no-repeat transparent;
+      background-size: contain;
       color: transparent;
-      line-height: 76px;
+      line-height: 110px;
+      margin: 0;
+      }
+    .star {
+      background: url("../images/star_cluster.png") 0 0 no-repeat transparent;
+      background-size: contain;
+      color: transparent;
+      margin: 0;
+      position: absolute;
+      left: 16%;
+      top: 0;
+      font-size: 100px;
     }
 
     .login,
     .register {
       position: relative;
-      left: 80%;
-      top: -110px;
+      left: 50%;
       background-color: inherit;
       border-radius: 4px;
       color: #adadad;
@@ -65,13 +75,16 @@ body {
       text-decoration: none;
 
       &:hover {
-        background: linear-gradient(0deg, #333333, #5c5c5c);
-        border: solid 1px #5c5c5c;
+        background: linear-gradient(0deg, #F4982F, #592d0b);
         border-radius: 4px;
-        color: #ca1e28;
+
+      }
       }
     }
   }
+
+.main-content {
+  max-width: $max-body-width;
 
   .navigator {
     .main-menu {
@@ -83,14 +96,14 @@ body {
       overflow: hidden;
 
       @include clearfix;
-    }
+      }
 
     li {
       list-style: none;
       float: left;
       text-align: center;
       border-right: 1px solid #747474;
-      background: linear-gradient(0deg, #333333, #5c5c5c);
+      background: linear-gradient(0deg, #059407, #072411);
       width: 16.65%;
 
       &:last-child {
@@ -98,7 +111,7 @@ body {
       }
 
       a {
-        text-decoration: none;
+          text-decoration: none;
         font: bold 18px 'Unica One', sans-serif;
         color: #adadad;
         display: block;
@@ -107,21 +120,21 @@ body {
         transition: text-shadow .2s ease-in;
 
         &:hover {
-          background: linear-gradient(0deg, #C53720, #AE1C24);
+          background: linear-gradient(0deg, #F4982F, #592d0b);
           color: #ffffff;
           text-decoration: none;
-          text-shadow: 1px 1px 2px #671b1b, 0 0 1em #320d0d;
+          text-shadow: 1px 1px 2px #9B5622, 0 0 1em #66331A;
+        }
         }
       }
     }
-  }
 
   .content {
-    $slider-max-height: 310px;
+    $slider-max-height: 300px;
 
-    border-radius: $global-border-radius;
+      border-radius: $global-border-radius;
     margin-top: 12px;
-    overflow: hidden;
+      overflow: hidden;
     padding: 0;
     max-width: 980px;
     max-height: $slider-max-height;
@@ -133,7 +146,7 @@ body {
 
     .aslider {
       height: $slider-max-height;
-      border-radius: $global-border-radius;
+        border-radius: $global-border-radius;
       overflow: hidden;
 
       .aslide {
@@ -148,7 +161,7 @@ body {
       img {
         max-width: 100%;
       }
-    }
+      }
 
     .links {
       .link {
@@ -171,10 +184,10 @@ body {
           }
         }
 
-        span, .link-img {
-          opacity: 0.4;
-          transition: opacity .3s ease-in;
-        }
+          span, .link-img {
+            opacity: 0.4;
+            transition: opacity .3s ease-in;
+          }
 
         span {
           background-color: #090909;
@@ -195,13 +208,13 @@ body {
           max-height: $slider-max-height/2-5;
           overflow: hidden;
         }
-      }
+        }
     }
 
     .baby, .about {
       padding: 2px 0 3px 0;
+      }
     }
-  }
 }
 
 .this-week {
@@ -209,7 +222,7 @@ body {
   font-size: 20px;
   color: #ffffff;
   text-transform: uppercase;
-}
+  }
 
 .main {
   position: relative;
@@ -228,20 +241,20 @@ body {
   }
 
   @include clearfix;
-}
+  }
 
 .footer-block {
   //height: 185px;
   margin: 1em -15px 0;
   text-align: center;
-  background: linear-gradient(0deg, #333333, #5c5c5c);
+  background: linear-gradient(0deg, #072411, #059407);
 
   .footer {
     padding-top: 20px;
 
     .footer-list {
-      border-top: solid #999999 1px;
-      border-bottom: solid #999999 1px;
+      border-top: solid #05AE07 1px;
+      border-bottom: solid #05AE07 1px;
       //height: 50%;
 
       .footer-list-item {
@@ -249,17 +262,19 @@ body {
         text-decoration: none;
         padding: 10px 0;
       }
-    }
+      }
     .footer-copy {
-      color: #999999;
+      color: #05AE07;
       font-size: 1em;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 20px;
       padding-bottom: 1em;
       margin-bottom: 0;
     }
+    }
   }
-}
+
+
 
 
 
