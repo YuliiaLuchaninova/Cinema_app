@@ -20,14 +20,6 @@ router.get('/', function (req, res, next) {
         }
     });
 });
-//router.get('/', function (req, res, next) {
-//    var fakeModel = {
-//        title: 'Edit Page',
-//        layout: 'admin-layout'
-//    };
-//
-//    res.render('film.sql-edit-page', fakeModel);
-//});
 
 
 module.exports = router;
