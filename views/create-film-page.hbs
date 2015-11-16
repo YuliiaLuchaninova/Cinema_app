@@ -1,23 +1,22 @@
 <!--<h1 class="page-title">Add / Edit film</h1>-->
 
 <div class="content row">
-    <h1 class="page-title">Edit {{title}}</h1>
+    <h1 class="page-title">Create new movie</h1>
 
     <div class="col-xs-4">
         <!--TODO: add film title to the alt attr-->
-        <img src="{{filmItem.image}}" alt="film-name-poster"
+        <img src="/images/Mexican-Boss-icon.png" alt="film-name-poster"
              class="film-poster"/>
     </div>
     <div class="col-xs-6 editing-block">
-        <form class="form-horizontal" action="/film-edit-page/edit-film/{{filmItem.id}}" method="POST"
-              enctype="multipart/form-data"
+        <form class="form-horizontal" action="/film-edit-page/save-film" method="POST" enctype="multipart/form-data"
               id="create-movie">
             <div class="form-group">
                 <label for="title" class="col-xs-4 control-label edit-form-label">Title</label>
 
                 <div class="col-xs-8">
                     <input type="text" class="form-control price" id="title"
-                           placeholder="Film's name" name="movieName" required value="{{title}}">
+                           placeholder="Film's name" name="movieName" required>
                 </div>
             </div>
 
@@ -26,7 +25,7 @@
 
                 <div class="col-xs-8">
                     <input type="number" class="form-control duration" id="duration"
-                           placeholder="minutes" name="duration" required value="{{filmItem.duration}}">
+                           placeholder="minutes" name="duration" required>
                 </div>
             </div>
 
@@ -35,7 +34,7 @@
 
                 <div class="col-xs-8">
                     <input type="number" class="form-control price" id="price"
-                           placeholder="$ per one ticket" name="price" required value="{{filmItem.price}}">
+                           placeholder="$ per one ticket" name="price" required>
                 </div>
             </div>
             <div class="form-group">
@@ -43,7 +42,7 @@
 
                 <div class="col-xs-8">
                     <input type="file" class="form-control image" id="image"
-                           placeholder="choose an image" name="image" required value="{{filmItem.image}}">
+                           placeholder="choose an image" name="image" required>
                 </div>
             </div>
 
@@ -52,7 +51,7 @@
 
                 <div class="col-xs-8">
                     <input type="date" class="form-control date" id="date"
-                           placeholder="choose a date" name="premiere" required value="{{filmItem.premiere}}">
+                           placeholder="choose a date" name="premiere" required>
                 </div>
             </div>
             <div class="form-group">
@@ -77,7 +76,7 @@
                 <div class="col-xs-8">
                     <textarea class="form-control description" id="description"
                               placeholder="Description of the film, max 870 symb."
-                              name="description" required>{{filmItem.description}}</textarea>
+                              name="description" required></textarea>
                 </div>
             </div>
 
@@ -85,16 +84,14 @@
                 <label for="actors" class="col-xs-4 control-label edit-form-label">Actors</label>
 
                 <div class="col-xs-8">
-                    <input type="text" class="form-control actors" id="actors" name="actors" required
-                           value="{{filmItem.actors}}">
+                    <input type="text" class="form-control actors" id="actors" name="actors" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="directed" class="col-xs-4 control-label edit-form-label">Directed by</label>
 
                 <div class="col-xs-8">
-                    <input type="text" class="form-control directed" id="directed" name="director" required
-                           value="{{filmItem.director}}">
+                    <input type="text" class="form-control directed" id="directed" name="director" required>
                 </div>
             </div>
 
@@ -103,14 +100,15 @@
 
                 <div class="col-xs-8">
                     <input type="url" class="form-control you-tube" id="YouTubeLink"
-                           placeholder="Link to trailer" name="youtube" required value="{{filmItem.YouTube}}">
+                           placeholder="Link to trailer" name="youtube" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-xs-12">
-                    <a href="/admin" class="btn btn-default edit-form-delete-film" form="create-movie">Cancel </a>
-                    <button type="submit" class="btn btn-default edit-form-save-changes" form="create-movie">Update
+                    <button type="button" class="btn btn-default edit-form-delete-film" form="create-movie">Delete
+                    </button>
+                    <button type="submit" class="btn btn-default edit-form-save-changes" form="create-movie">Save
                     </button>
 
                 </div>

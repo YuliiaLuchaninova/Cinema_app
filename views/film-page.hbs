@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/film-page.css" rel="stylesheet">
+
+</head>
+<body>
+<main class="main row about-film">
+    <div class="film">
+        <h1 class="page-header">{{title}}</h1>
+
+        <div class="film-info row">
+            <div class="film-description col-xs-6">
+                <p> Premiere: {{premiere}}</p>
+
+                <p> Duration: {{duration}} min</p>
+
+                <p> Director:{{director}}</p>
+
+                <p> Actors:{{actors}}</p>
+
+                <p class="row announcement"> {{description}}</p>
+
+            </div>
+            <div class="poster col-xs-6">
+                <img src="{{image}}" alt="{{title}}"/>
+            </div>
+        </div>
+        <div class="film-video row">
+            <div class="col-xs-12 video">
+                <iframe class="video-frame" src="{{YouTube}}" allowfullscreen></iframe>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</main>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

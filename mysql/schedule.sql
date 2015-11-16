@@ -1,0 +1,6 @@
+CREATE TABLE schedule
+  (
+    ID       INTEGER NOT NULL PRIMARY KEY,
+    MovieID  INTEGER NOT NULL REFERENCES movies(ID),
+    ShowDate DATE NOT NULL
+  );

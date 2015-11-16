@@ -3,13 +3,22 @@
  */
 var express = require('express');
 var router = express.Router();
-router.get('/', function (req, res, next) {
-    var fakeModel = {
-        title: 'Admin',
-        layout: 'admin-layout'
-    };
+var db = require('../mysql/dbConnection');
 
-    res.render('admin', fakeModel);
+
+router.get('/', function (req, res, next) {
+    db.query('SELECT * FROM film.sql', function (error, filmList) {
+        if (error) {
+            console.log(error.message);
+        } else {
+            console.log('success');
+            var viewModel = {
+                layout: 'admin-layout',
+                filmList: filmList
+            };
+            res.render('admin', viewModel);
+        }
+    });
 });
 //router.get('/', function (req, res, next) {
 //    var fakeModel = {
@@ -17,7 +26,7 @@ router.get('/', function (req, res, next) {
 //        layout: 'admin-layout'
 //    };
 //
-//    res.render('film-edit-page', fakeModel);
+//    res.render('film.sql-edit-page', fakeModel);
 //});
 
 

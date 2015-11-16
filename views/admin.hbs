@@ -1,26 +1,3 @@
-<!--<!doctype html>-->
-<!--<html>-->
-<!--<head>-->
-<!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
-<!--<title>Admin</title>-->
-<!--<link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>-->
-<!--<link href="../../styles/admin.css" rel="stylesheet">-->
-
-<!--</head>-->
-<!--<body>-->
-<!--<div class="page">-->
-
-<!--<div class="container-fluid">-->
-<!--<header class="row header">-->
-<!--<a class="logo-link" href="/">-->
-<!--<h1 class="logo">Cinema</h1>-->
-<!--</a>-->
-<!--<a class="logout" href="/">Log out</a>-->
-
-<!--<a class="my-profile-watch" href="../myProfile.jsp">My Profile</a>-->
-
-<!--</header>-->
-
 <div class="row">
     <div class="row top-nav-module">
         <ul class="tabs">
@@ -45,53 +22,77 @@
             </li>
         </ul>
         <section id="manageMovies" class="active-tab tab-content">
-            <a href="/film-edit-page" class="btn btn-success add-film">Add new film</a>
+            <a href="/film-edit-page/create-film" class="btn btn-success add-film">Add new film</a>
             <ul class="film-list">
                 <!--TODO: Add loop to render all movies on the page-->
-                <li id="movie-id-1" class="film-item">
-                    <h2 class="film-title">
-                        Best film ever
-                    </h2>
+                {{#each filmList}}
+                    <li id="{{id}}" class="film-item">
+                        <h2 class="film-title">
+                            {{title}}
+                        </h2>
 
-                    <img src="http://media.moviemanager.biz/movies/99-Homes_25692_posterbgnd.jpg" alt=""
-                         class="film-avatar"/>
+                        <img src="{{image}}" alt="{{title}}"
+                             class="film-avatar"/>
 
-                    <div class="premier-date">
-                        20 December 2015
-                    </div>
+                        <div class="premier-date">
+                            {{premiere}}
+                        </div>
 
-                    <div class="ctrl-block">
-                        <a href="/film-edit-page" class="btn film-edit">
-                            Edit
-                        </a>
+                        <div class="ctrl-block">
+                            <a href="/film-edit-page/{{id}}" class="btn film-edit">
+                                Edit
+                            </a>
 
-                        <button class="btn film-remove">
-                            Remove
-                        </button>
-                    </div>
-                </li>
+                            <button class="btn film-remove">
+                                Remove
+                            </button>
+                        </div>
+                    </li>
+                {{/each}}
+                {{!--<li id="movie-id-1" class="film.sql-item">--}}
+                {{!--<h2 class="film.sql-title">--}}
+                {{!--Best film.sql ever--}}
+                {{!--</h2>--}}
 
-                <li id="movie-id-2" class="film-item">
-                    <h2 class="film-title">
-                        Best film ever #2
-                    </h2>
+                {{!--<img src="http://media.moviemanager.biz/movies/99-Homes_25692_posterbgnd.jpg" alt=""--}}
+                {{!--class="film.sql-avatar"/>--}}
 
-                    <img src="http://media.moviemanager.biz/movies/Black-Mass_25470_posterbgnd.jpg" alt=""
-                         class="film-avatar"/>
+                {{!--<div class="premier-date">--}}
+                {{!--20 December 2015--}}
+                {{!--</div>--}}
 
-                    <div class="premier-date">
-                        10 January 2016
-                    </div>
+                {{!--<div class="ctrl-block">--}}
+                {{!--<a href="/film.sql-edit-page" class="btn film.sql-edit">--}}
+                {{!--Edit--}}
+                {{!--</a>--}}
 
-                    <div class="ctrl-block">
-                        <a href="#path-to-the-movie-2-page" class="btn film-edit">
-                            Edit
-                        </a>
-                        <button class="btn film-remove">
-                            Remove
-                        </button>
-                    </div>
-                </li>
+                {{!--<button class="btn film.sql-remove">--}}
+                {{!--Remove--}}
+                {{!--</button>--}}
+                {{!--</div>--}}
+                {{!--</li>--}}
+
+                {{!--<li id="movie-id-2" class="film.sql-item">--}}
+                {{!--<h2 class="film.sql-title">--}}
+                {{!--Best film.sql ever #2--}}
+                {{!--</h2>--}}
+
+                {{!--<img src="http://media.moviemanager.biz/movies/Black-Mass_25470_posterbgnd.jpg" alt=""--}}
+                {{!--class="film.sql-avatar"/>--}}
+
+                {{!--<div class="premier-date">--}}
+                {{!--10 January 2016--}}
+                {{!--</div>--}}
+
+                {{!--<div class="ctrl-block">--}}
+                {{!--<a href="#path-to-the-movie-2-page" class="btn film.sql-edit">--}}
+                {{!--Edit--}}
+                {{!--</a>--}}
+                {{!--<button class="btn film.sql-remove">--}}
+                {{!--Remove--}}
+                {{!--</button>--}}
+                {{!--</div>--}}
+                {{!--</li>--}}
             </ul>
         </section>
         <section id="genres" class="tab-content">

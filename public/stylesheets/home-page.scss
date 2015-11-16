@@ -8,6 +8,8 @@
 @import "about-us";
 @import "variables";
 @import "news-letter";
+@import "film-page";
+
 
 $max-body-width: 980px;
 $global-border-radius: 10px;
@@ -234,7 +236,7 @@ body {
   overflow: hidden;
   background-size: cover;
   background-color: #090909;
-  height: 600px;
+  min-height: 600px;
 
   .fb-like {
     left: 40%;

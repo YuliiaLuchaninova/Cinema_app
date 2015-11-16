@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer = require('multer')
+var upload = multer({dest: 'uploads/'})
+
 
 var newsLetterRouter = require('./controllers/newsLetter');
 var aboutUsRouter = require('./controllers/aboutUs');
@@ -13,12 +16,14 @@ var tomorrowRouter = require('./controllers/tomorrow');
 var todayRouter = require('./controllers/today');
 var candyBar = require('./controllers/candyBar');
 var kidzClub = require('./controllers/kidzClub');
+var filmPage = require('./controllers/film-page');
 var filmEditRouter = require('./controllers/filmEditPage');
 var adminRouter = require('./controllers/admin');
 var homeRouter = require('./controllers/home-page');
 var users = require('./controllers/users');
 
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,10 +45,12 @@ app.use('/tomorrow', tomorrowRouter);
 app.use('/today', todayRouter);
 app.use('/candy-bar', candyBar);
 app.use('/kidz-club', kidzClub);
-app.use('/film-edit-page', filmEditRouter);
+app.use('/film.sql-edit-page', filmEditRouter);
 app.use('/admin', adminRouter);
-app.use('/', homeRouter);
 app.use('/users', users);
+app.use('/films', filmPage);
+
+app.use('/', homeRouter);
 
 
 // catch 404 and forward to error handler
@@ -76,6 +83,5 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
