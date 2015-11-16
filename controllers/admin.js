@@ -7,7 +7,7 @@ var db = require('../mysql/dbConnection');
 
 
 router.get('/', function (req, res, next) {
-    db.query('SELECT * FROM film.sql', function (error, filmList) {
+    db.query('SELECT * FROM film', function (error, filmList) {
         if (error) {
             console.log(error.message);
         } else {

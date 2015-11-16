@@ -5,7 +5,7 @@ var db = require('../mysql/dbConnection');
 //страница просмотра фильма
 router.get('/:id', function (req, res) {
 
-    db.query('SELECT * from film.sql where id = "' + req.params.id + '"', function (error, data) {
+    db.query('SELECT * from film where id = "' + req.params.id + '"', function (error, data) {
         var movie = data[0],
             options = {
                 year: 'numeric',
@@ -24,7 +24,7 @@ router.get('/:id', function (req, res) {
                 movie.premiere = premiereFormated;
                 movie.layout = 'user-layout';
 
-                res.render('film.sql-page', movie);
+                res.render('film-page', movie);
             } else {
                 res.redirect('/admin');
             }

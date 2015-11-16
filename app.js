@@ -45,7 +45,7 @@ app.use('/tomorrow', tomorrowRouter);
 app.use('/today', todayRouter);
 app.use('/candy-bar', candyBar);
 app.use('/kidz-club', kidzClub);
-app.use('/film.sql-edit-page', filmEditRouter);
+app.use('/film-edit-page', filmEditRouter);
 app.use('/admin', adminRouter);
 app.use('/users', users);
 app.use('/films', filmPage);

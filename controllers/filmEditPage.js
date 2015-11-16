@@ -14,15 +14,15 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage});
 
 //вызывается из кнопки Add movie
-router.get("/create-film.sql", function (req, res, next) {
+router.get("/create-film", function (req, res, next) {
     var viewModel = {
         layout: 'admin-layout'
     };
 
-    res.render('create-film.sql-page', viewModel);
+    res.render('create-film-page', viewModel);
 });
 //Вызывается из формы создания фильма
-router.post("/save-film.sql", upload.single('image'), function (req, res) {
+router.post("/save-film", upload.single('image'), function (req, res) {
     var id = req.body.movieName.replace(",", "").replace(/\s/g, "-").toLowerCase();
 
     var postFilm = {
@@ -39,7 +39,7 @@ router.post("/save-film.sql", upload.single('image'), function (req, res) {
         YouTube: req.body.youtube
     };
 
-    db.query('INSERT INTO film.sql SET ?', postFilm, function (error) {
+    db.query('INSERT INTO film SET ?', postFilm, function (error) {
         if (error) {
             console.log(error.message);
         } else {
@@ -49,9 +49,9 @@ router.post("/save-film.sql", upload.single('image'), function (req, res) {
     });
 });
 //страница редактирования фильма
-// корневой роут - /film.sql-edit-page
+// корневой роут - /film-edit-page
 router.get("/:id", function (req, res, next) {
-    db.query('SELECT * from film.sql where id = "' + req.params.id + '"', function (error, filmItem) {
+    db.query('SELECT * from film where id = "' + req.params.id + '"', function (error, filmItem) {
         if (error) {
             console.log(error.message);
         }
@@ -64,12 +64,12 @@ router.get("/:id", function (req, res, next) {
                 filmItem: filmItem[0]
             };
 
-            res.render('film.sql-edit-page', viewModel);
+            res.render('film-edit-page', viewModel);
         }
     });
 });
 
-router.post("/edit-film.sql/:id", upload.single('image'), function (req, res, next) {
+router.post("/edit-film/:id", upload.single('image'), function (req, res, next) {
     var updatedFilm = {
         id: req.params.id,
         title: req.body.movieName,
@@ -84,7 +84,7 @@ router.post("/edit-film.sql/:id", upload.single('image'), function (req, res, ne
         YouTube: req.body.youtube
     };
 
-    db.query('UPDATE film.sql SET ? WHERE id="' + req.params.id + '"', updatedFilm, function (error, updatedFilm) {
+    db.query('UPDATE film SET ? WHERE id="' + req.params.id + '"', updatedFilm, function (error, updatedFilm) {
         if (error) {
             console.log(error.message);
         } else {
