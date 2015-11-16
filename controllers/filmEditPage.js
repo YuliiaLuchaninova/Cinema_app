@@ -6,7 +6,7 @@ var router = express.Router();
 var db = require('../mysql/dbConnection');
 var multer = require('multer');
 var storage = multer.diskStorage({
-    destination: 'public/films-posters',
+    destination: appRoot + 'public/films-posters',
     filename: function (req, file, cb) {
         cb(null, file.originalname);
     }
