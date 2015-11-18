@@ -1,6 +1,9 @@
+DROP TABLE schedule;
 CREATE TABLE schedule
   (
-    ID       INTEGER NOT NULL PRIMARY KEY,
-    MovieID  INTEGER NOT NULL REFERENCES movies(ID),
-    ShowDate DATE NOT NULL
+    ID       INT NOT NULL AUTO_INCREMENT,
+    MovieID  INT NOT NULL ,
+    ShowDate DATE NOT NULL,
+    PRIMARY KEY(ID),
+    FOREIGN KEY(MovieID) REFERENCES movies(ID)
   );

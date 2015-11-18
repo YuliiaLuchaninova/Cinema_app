@@ -1,0 +1,5 @@
+SOURCE C:\Users\Julia\Projects\Cinema2\myapp\mysql\create cinema.sql
+SOURCE C:\Users\Julia\Projects\Cinema2\myapp\mysql\film.sql
+SOURCE C:\Users\Julia\Projects\Cinema2\myapp\mysql\schedule.sql
+SOURCE C:\Users\Julia\Projects\Cinema2\myapp\mysql\users.sql
+SOURCE C:\Users\Julia\Projects\Cinema2\myapp\mysql\roles.sql

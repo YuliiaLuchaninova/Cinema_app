@@ -1,0 +1,7 @@
+DROP TABLE roles;
+CREATE TABLE roles
+  (
+    ID       INT NOT NULL AUTO_INCREMENT,
+    RoleName VARCHAR(25) NOT NULL,
+    PRIMARY KEY(ID)
+  );

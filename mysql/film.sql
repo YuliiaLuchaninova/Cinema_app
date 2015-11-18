@@ -1,15 +1,16 @@
+DROP TABLE film;
 CREATE TABLE film
   (
-    id VARCHAR(100),
-    title VARCHAR(100),
-    duration CHAR(10),
-    price INT(10),
-    image VARCHAR(100),
+    id       VARCHAR(100) NOT NULL,
+    title    VARCHAR(35) NOT NULL,
+    duration INT NOT NULL,
+    price FLOAT,
+    image VARCHAR(100) NOT NULL,
     premiere DATE,
-    genres VARCHAR(20),
-    description mediumtext,
-    actors text,
-    director VARCHAR(100),
-    YouTube text,
-
-  );
+    genres    VARCHAR(20) NOT NULL,
+    description MEDIUMTEXT NOT NULL,
+    actors VARCHAR(1000) NOT NULL,
+    director VARCHAR(100) NOT NULL,
+    YouTube VARCHAR(200) NOT NULL,
+    PRIMARY KEY(ID)
+     );
