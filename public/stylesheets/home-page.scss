@@ -10,7 +10,6 @@
 @import "news-letter";
 @import "film-page";
 
-
 $max-body-width: 980px;
 $global-border-radius: 10px;
 
@@ -21,6 +20,7 @@ html, body {
 
 body {
   background: url("../images/Abstract%20bright%20light.jpg") 0 0 no-repeat transparent;
+  background-size: cover;
 }
 
 .page {
@@ -53,7 +53,7 @@ body {
       color: transparent;
       line-height: 110px;
       margin: 0;
-      }
+    }
     .star {
       background: url("../images/star_cluster.png") 0 0 no-repeat transparent;
       background-size: contain;
@@ -81,9 +81,9 @@ body {
         border-radius: 4px;
 
       }
-      }
     }
   }
+}
 
 .main-content {
   max-width: $max-body-width;
@@ -98,7 +98,7 @@ body {
       overflow: hidden;
 
       @include clearfix;
-      }
+    }
 
     li {
       list-style: none;
@@ -113,7 +113,7 @@ body {
       }
 
       a {
-          text-decoration: none;
+        text-decoration: none;
         font: bold 18px 'Unica One', sans-serif;
         color: #adadad;
         display: block;
@@ -127,16 +127,16 @@ body {
           text-decoration: none;
           text-shadow: 1px 1px 2px #9B5622, 0 0 1em #66331A;
         }
-        }
       }
     }
+  }
 
   .content {
     $slider-max-height: 300px;
 
-      border-radius: $global-border-radius;
+    border-radius: $global-border-radius;
     margin-top: 12px;
-      overflow: hidden;
+    overflow: hidden;
     padding: 0;
     max-width: 980px;
     max-height: $slider-max-height;
@@ -148,7 +148,7 @@ body {
 
     .aslider {
       height: $slider-max-height;
-        border-radius: $global-border-radius;
+      border-radius: $global-border-radius;
       overflow: hidden;
 
       .aslide {
@@ -163,7 +163,7 @@ body {
       img {
         max-width: 100%;
       }
-      }
+    }
 
     .links {
       .link {
@@ -186,10 +186,10 @@ body {
           }
         }
 
-          span, .link-img {
-            opacity: 0.4;
-            transition: opacity .3s ease-in;
-          }
+        span, .link-img {
+          opacity: 0.4;
+          transition: opacity .3s ease-in;
+        }
 
         span {
           background-color: #090909;
@@ -210,13 +210,13 @@ body {
           max-height: $slider-max-height/2-5;
           overflow: hidden;
         }
-        }
+      }
     }
 
     .baby, .about {
       padding: 2px 0 3px 0;
-      }
     }
+  }
 }
 
 .this-week {
@@ -224,7 +224,7 @@ body {
   font-size: 20px;
   color: #ffffff;
   text-transform: uppercase;
-  }
+}
 
 .main {
   position: relative;
@@ -238,12 +238,62 @@ body {
   background-color: #090909;
   min-height: 600px;
 
-  .fb-like {
-    left: 40%;
+  @include clearfix;
+  .movie-list {
+    padding: 0;
+    overflow: hidden;
+
+    @include clearfix;
+
+    .film-item {
+      display: inline;
+      position: relative;
+      float: left;
+      width: 20%;
+      overflow: hidden;
+      list-style: none;
+      padding: 8px;
+      transition: ease-out 0.2s;
+      margin-top: 10px;
+      line-height: 100%;
+      &:hover {
+        background: linear-gradient(0deg, #059407, #072411);
+        color: #ffffff;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #057107, 0 0 1em #081A0D;
+        border-radius: 5px;
+        padding: 0;
+        margin-bottom: -5px;
+      }
+      &:nth-child(5n+1) {
+        clear: left;
+      }
+
+      .title-container {
+        height: 50px;
+        display: block;
+        text-align: center;
+        .film-title {
+          font-size: 14px;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          color: #ffffff;
+          line-height: 20px;
+          margin: 0;
+
+        }
+      }
+      .film-page-btn {
+        color: #adadad;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
   }
 
-  @include clearfix;
-  }
+}
 
 .footer-block {
   //height: 185px;
@@ -264,7 +314,7 @@ body {
         text-decoration: none;
         padding: 10px 0;
       }
-      }
+    }
     .footer-copy {
       color: #05AE07;
       font-size: 1em;
@@ -273,8 +323,8 @@ body {
       padding-bottom: 1em;
       margin-bottom: 0;
     }
-    }
   }
+}
 
 
 

@@ -3,13 +3,24 @@
  */
 var express = require('express');
 var router = express.Router();
+var db = require('../mysql/dbConnection');
 
 router.get('/', function (req, res, next) {
-    var fakeModel = {
-        title: 'All week',
-        layout: 'user-layout'
-    };
+    db.query('SELECT * FROM film WHERE CURDATE()+INTERVAL 7 DAY >= premiere AND CURDATE()+INTERVAL 7 DAY < enddate', function (error, filmList) {
+        if (error) {
+            console.log(error.message);
+        } else {
+            console.log('success');
+            var viewModel = {
+                layout: 'user-layout',
+                filmList: filmList,
+                title: 'Cinema'
+            };
 
-    res.render('all-week', fakeModel);
+            res.render('all-week', viewModel);
+        }
+    });
+
+
 });
 module.exports = router;

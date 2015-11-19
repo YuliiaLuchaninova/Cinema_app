@@ -108,6 +108,65 @@
             </div>
 
             <div class="form-group">
+                <label for="enddate" class="col-xs-4 control-label edit-form-label">End of the show</label>
+
+                <div class="col-xs-8">
+                    <input type="date" class="form-control date" id="enddate"
+                           placeholder="choose date oh the end of show" name="enddate" required
+                           value="{{filmItem.enddate}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="time1" class="col-xs-4 control-label edit-form-label">Time of the show</label>
+
+                <div class="col-xs-4">
+                    <select class="form-control" id="time1" name="time1">
+                        <option value="{{filmItem.time1}}">9:00</option>
+                        <option value="{{filmItem.time1}}">11:00</option>
+                        <option value="{{filmItem.time1}}">13:00</option>
+                        <option value="{{filmItem.time1}}">15:00</option>
+                        <option value="{{filmItem.time1}}">17:00</option>
+                        <option value="{{filmItem.time1}}">19:00</option>
+                        <option value="{{filmItem.time1}}">21:00</option>
+                        <option value="{{filmItem.time1}}">23:00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time2" class="col-xs-4 control-label edit-form-label"></label>
+
+                <div class="col-xs-4">
+                    <select class="form-control" id="time2" name="time2">
+                        <option value="{{filmItem.time2}}">9:00</option>
+                        <option value="{{filmItem.time2}}">11:00</option>
+                        <option value="{{filmItem.time2}}">13:00</option>
+                        <option value="{{filmItem.time2}}">15:00</option>
+                        <option value="{{filmItem.time2}}">17:00</option>
+                        <option value="{{filmItem.time2}}">19:00</option>
+                        <option value="{{filmItem.time2}}">21:00</option>
+                        <option value="{{filmItem.time2}}">23:00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time3" class="col-xs-4 control-label edit-form-label"></label>
+
+                <div class="col-xs-4">
+                    <select class="form-control" id="time3" name="time3">
+                        <option value="{{filmItem.time3}}">9:00</option>
+                        <option value="{{filmItem.time3}}">11:00</option>
+                        <option value="{{filmItem.time3}}">13:00</option>
+                        <option value="{{filmItem.time3}}">15:00</option>
+                        <option value="{{filmItem.time3}}">17:00</option>
+                        <option value="{{filmItem.time3}}">19:00</option>
+                        <option value="{{filmItem.time3}}">21:00</option>
+                        <option value="{{filmItem.time3}}">23:00</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="col-xs-12">
                     <a href="/admin" class="btn btn-default edit-form-delete-film" form="create-movie">Cancel </a>
                     <button type="submit" class="btn btn-default edit-form-save-changes" form="create-movie">Update

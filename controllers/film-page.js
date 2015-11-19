@@ -16,6 +16,7 @@ router.get('/:id', function (req, res) {
             },
             premiereFormated = movie.premiere.toLocaleString('en', options);
 
+
         if (error) {
             console.log(error.message);
             res.redirect('/admin');

@@ -6,7 +6,7 @@ var router = express.Router();
 var db = require('../mysql/dbConnection');
 var multer = require('multer');
 var storage = multer.diskStorage({
-    destination: appRoot + 'public/films-posters',
+    destination: appRoot + '/public/films-posters',
     filename: function (req, file, cb) {
         cb(null, file.originalname);
     }
@@ -36,7 +36,11 @@ router.post("/save-film", upload.single('image'), function (req, res) {
         description: req.body.description,
         actors: req.body.actors,
         director: req.body.director,
-        YouTube: req.body.youtube
+        YouTube: req.body.youtube,
+        enddate: req.body.enddate,
+        time1: req.body.time1,
+        time2: req.body.time2,
+        time3: req.body.time3
     };
 
     db.query('INSERT INTO film SET ?', postFilm, function (error) {

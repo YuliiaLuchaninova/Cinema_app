@@ -6,12 +6,26 @@
 
 <main class="main row">
     <div class="col-xs-12 movie-list">
-        <div class="fb-like"
-             data-href="https://developers.facebook.com/docs/plugins/"
-             data-width="300"
-             data-layout="button_count"
-             data-action="like"
-             data-show-faces="true"
-             data-share="true"></div>
+        <ul class="movie-list">
+            {{#each filmList}}
+                <li id="{{id}}" class="film-item">
+               <span class="title-container"> <h2 class="film-title">
+                   {{title}}
+               </h2></span>
+
+                    <img src="{{image}}" alt="{{title}}"
+                         class="film-avatar"/>
+
+
+                    <div class="ctrl-block">
+                        <a href="/films/{{id}}" class="btn film-page-btn">
+                            Read more
+                        </a>
+
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+
     </div>
 </main>
