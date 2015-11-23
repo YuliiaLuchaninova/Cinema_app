@@ -1,6 +1,6 @@
 <h3>Requirements:</h3>
 Node.js<br>
-NMP 3+<br>
+NPM 3+<br>
 mySQL
 
 <h3>Installation:</h3>
