@@ -3,7 +3,7 @@
 @import "candybar";
 @import "today";
 @import "tomorrow";
-@import "all-week";
+@import "next-week";
 @import "coming-soon";
 @import "about-us";
 @import "variables";
@@ -19,8 +19,8 @@ html, body {
 }
 
 body {
-  background: url("../images/Abstract%20bright%20light.jpg") 0 0 no-repeat transparent;
-  background-size: cover;
+  background: url("../images/Abstract%20bright%20light.jpg") 0 0 repeat-y transparent;
+  //background-size: cover;
 }
 
 .page {
@@ -252,8 +252,8 @@ body {
       width: 20%;
       overflow: hidden;
       list-style: none;
-      padding: 8px;
-      transition: ease-out 0.2s;
+      padding: 8px 8px 15px;
+      transition: all ease-out 0.2s;
       margin-top: 10px;
       line-height: 100%;
       &:hover {

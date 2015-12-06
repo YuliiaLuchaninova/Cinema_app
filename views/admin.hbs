@@ -17,6 +17,10 @@
                 <a href="#booking" class="tab-link">Manage Booking</a>
             </li>
 
+            <li class="contact tab">
+                <a href="#contact" class="tab-link">Manage contact info</a>
+            </li>
+
             <li class="my-profile tab">
                 <a href="#myProfile" class="tab-link">My Profile</a>
             </li>
@@ -24,11 +28,11 @@
         <section id="manageMovies" class="active-tab tab-content">
             <a href="/film-edit-page/create-film" class="btn btn-success add-film">Add new film</a>
             <ul class="film-list">
-                <!--TODO: Add loop to render all movies on the page-->
+
                 {{#each filmList}}
                     <li id="{{id}}" class="film-item">
                         <h2 class="film-title">
-                            {{title}}
+                            <a href='/films/{{id}}'> {{title}}</a>
                         </h2>
 
                         <img src="{{image}}" alt="{{title}}"
@@ -43,29 +47,57 @@
                                 Edit
                             </a>
 
-                            <button class="btn film-remove">
+                            {{!--<button class="btn film-remove">--}}
+                            {{!--Remove--}}
+                            {{!--</button>--}}
+                            <a href="/admin/remove/films/{{id}}" class="btn film-remove">
                                 Remove
-                            </button>
+                            </a>
                         </div>
                     </li>
                 {{/each}}
             </ul>
         </section>
         <section id="genres" class="tab-content">
-            <p>This will install Sass and any dependencies for you. It's pretty magical. If you get an error
-                message0000 then
-                it's likely you will need to use the sudo command to install the Sass gem. It would look
-                ggggggggggggglikehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh:2222222
-                22222222222222222222222222222222222222222222222222222222222222</p>
+            {{!--<p>This will install Sass and any dependencies for you. It's pretty magical. If you get an error--}}
+            {{!--message0000 then--}}
+            {{!--it's likely you will need to use the sudo command to install the Sass gem. It would look--}}
+            {{!--ggggggggggggglikehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh:2222222--}}
+            {{!--22222222222222222222222222222222222222222222222222222222222222</p>--}}
         </section>
         <section id="schedule" class="tab-content">
-            <p>u will need to use the sudo command to install the Sass gem. It would look like:</p>
+            {{!--<p>u will need to use the sudo command to install the Sass gem. It would look like:</p>--}}
         </section>
         <section id="users" class="tab-content">
-            <p>This:</p>
+            {{!--<p>This:</p>--}}
         </section>
         <section id="booking" class="tab-content">
-            <p>This will need to use the sudo command to install the Sass gem. It would look like:</p>
+            {{!--<p>This will need to use the sudo command to install the Sass gem. It would look like:</p>--}}
+        </section>
+        <section id="contact" class="tab-content">
+
+            <div class="col-xs-6 contacts">
+                <p>Address: {{adress}} </p>
+
+                <p>Phone:{{phone}}</p>
+
+                <p>Facebook group :{{facebook}}</p>
+
+                <p>Twitter: {{twitter}}</p>
+
+                <p>Skype : {{skype}}</p>
+            </div>
+
+            <div class="col-xs-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.9661420912803!2d22.525213015284372!3d51.23811843817774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472259d5a5513d85%3A0xe0c4db85ceb62897!2sTomasza+Zana+39%2C+20-400+Lublin!5e0!3m2!1sru!2spl!4v1447951077219"
+                        class="map" allowfullscreen></iframe>
+            </div>
+            <div class="ctrl-block">
+                <a href="/edit-about-us" class="btn btn-default">
+                    Edit
+                </a>
+
+
         </section>
         <section id="myProfile" class="tab-content">
             <h1 class="page-title">Admin</h1>

@@ -12,22 +12,38 @@ router.get('/', function (req, res, next) {
             console.log(error.message);
         } else {
             console.log('success');
-            var viewModel = {
-                layout: 'admin-layout',
-                filmList: filmList
-            };
-            res.render('admin', viewModel);
+
+            db.query('SELECT * FROM address', function (error, contacts) {
+                var options = {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    weekday: 'long',
+                    timezone: 'UTC'
+                };
+
+                filmList.forEach(function (film) {
+                    film.premiere = film.premiere.toLocaleString('en', options);
+                });
+                var viewModel = {
+                    layout: 'admin-layout',
+                    filmList: filmList,
+                    contacts: contacts
+                };
+                res.render('admin', viewModel);
+            });
         }
     });
 });
-//router.get('/', function (req, res, next) {
-//    var fakeModel = {
-//        title: 'Edit Page',
-//        layout: 'admin-layout'
-//    };
-//
-//    res.render('film.sql-edit-page', fakeModel);
-//});
 
+router.get('/remove/films/:id', function (req, res) {
+    db.query('DELETE FROM film WHERE id="' + req.params.id + '"', function (error) {
+        if (error) {
+            console.log(error.message);
+        }
+        res.redirect('/admin');
+    })
+
+});
 
 module.exports = router;

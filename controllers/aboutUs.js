@@ -3,13 +3,24 @@
  */
 var express = require('express');
 var router = express.Router();
+var db = require('../mysql/dbConnection');
 
 router.get('/', function (req, res, next) {
-    var fakeModel = {
-        title: 'About us',
-        layout: 'user-layout'
-    };
+    db.query('SELECT * from address', function (error, contacts) {
+        if (error) {
+            console.log(error.message);
+        }
+        else {
+            console.log('success');
 
-    res.render('about-us', fakeModel);
+            var fakeModel = {
+                title: 'About us',
+                layout: 'user-layout',
+                contacts: contacts
+            };
+
+            res.render('about-us', fakeModel);
+        }
+    })
 });
 module.exports = router;

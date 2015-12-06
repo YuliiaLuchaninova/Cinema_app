@@ -1,0 +1,84 @@
+<div class="content row">
+    <h2 class="page-title">Edit contact information</h2>
+
+    <div class="col-xs-4">
+
+
+        <img src="/images/maps.png" alt="map"
+             class="map-poster"/>
+    </div>
+    <div class="col-xs-6 editing-block">
+
+
+        <form class="form-horizontal" action="/edit-about-us" method="POST"
+
+              id="contact">
+            <div class="form-group">
+                <label for="address" class="col-xs-4 control-label edit-form-label">Address</label>
+
+                <div class="col-xs-8">
+                         <textarea class="form-control" id="address"
+                                   placeholder="Country, city, street, postcode"
+                                   name="address" required>{{address}}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="col-xs-4 control-label edit-form-label">Phone</label>
+
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" id="phone"
+                           name="phone" required value="{{phone}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="facebook" class="col-xs-4 control-label edit-form-label">Facebook</label>
+
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" id="facebook"
+                           name="facebook" required value="{{facebook}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="twitter" class="col-xs-4 control-label edit-form-label">Twitter</label>
+
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" id="twitter"
+                           name="twitter" required value="{{twitter}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="skype" class="col-xs-4 control-label edit-form-label">Skype</label>
+
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" id="skype"
+                           name="skype" required value="{{skype}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="map" class="col-xs-4 control-label edit-form-label">Map</label>
+
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" id="map" placeholder="Google map URL"
+                           name="map" required value="{{map}}">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-xs-12">
+
+                    <button type="submit" class="btn btn-default edit-form-save-changes" form="contact">Edit
+                    </button>
+
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>

@@ -5,17 +5,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var multer = require('multer')
-var upload = multer({dest: 'uploads/'})
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
 
 
 var newsLetterRouter = require('./controllers/newsLetter');
 var aboutUsRouter = require('./controllers/aboutUs');
 var comingSoonRouter = require('./controllers/comingSoon');
-var allWeekRouter = require('./controllers/allWeek');
+var nextWeekRouter = require('./controllers/nextWeek');
 var tomorrowRouter = require('./controllers/tomorrow');
 var todayRouter = require('./controllers/today');
 var candyBar = require('./controllers/candyBar');
+var contactEditRouter = require('./controllers/editAboutUs');
 var kidzClub = require('./controllers/kidzClub');
 var filmPage = require('./controllers/film-page');
 var filmEditRouter = require('./controllers/filmEditPage');
@@ -38,10 +39,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/news-letter', newsLetterRouter);
 app.use('/about-us', aboutUsRouter);
 app.use('/coming-soon', comingSoonRouter);
-app.use('/all-week', allWeekRouter);
+app.use('/next-week', nextWeekRouter);
 app.use('/tomorrow', tomorrowRouter);
 app.use('/today', todayRouter);
 app.use('/candy-bar', candyBar);
@@ -50,6 +52,7 @@ app.use('/film-edit-page', filmEditRouter);
 app.use('/admin', adminRouter);
 app.use('/users', users);
 app.use('/films', filmPage);
+app.use('/edit-about-us', contactEditRouter);
 
 app.use('/', homeRouter);
 

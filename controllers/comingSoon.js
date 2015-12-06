@@ -6,7 +6,7 @@ var router = express.Router();
 var db = require('../mysql/dbConnection');
 
 router.get('/', function (req, res, next) {
-    db.query('SELECT * FROM film WHERE premiere >= CURDATE()+INTERVAL 10 DAY', function (error, filmList) {
+    db.query('SELECT * FROM film WHERE premiere >= CURDATE()+INTERVAL 8 DAY', function (error, filmList) {
         if (error) {
             console.log(error.message);
         } else {

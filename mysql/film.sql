@@ -13,8 +13,8 @@ CREATE TABLE film
     director VARCHAR(100) NOT NULL,
     YouTube VARCHAR(200) NOT NULL,
     enddate DATETIME,
-    time1 VARCHAR(10) NOT NULL,
-    time2 VARCHAR(10) NOT NULL,
-    time3 VARCHAR(10) NOT NULL,
+    schedule1 VARCHAR(10) NOT NULL,
+    schedule2 VARCHAR(10) NOT NULL,
+    schedule3 VARCHAR(10) NOT NULL,
     PRIMARY KEY(ID)
      );

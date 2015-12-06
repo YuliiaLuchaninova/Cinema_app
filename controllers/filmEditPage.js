@@ -38,9 +38,9 @@ router.post("/save-film", upload.single('image'), function (req, res) {
         director: req.body.director,
         YouTube: req.body.youtube,
         enddate: req.body.enddate,
-        time1: req.body.time1,
-        time2: req.body.time2,
-        time3: req.body.time3
+        schedule1: req.body.schedule1,
+        schedule2: req.body.schedule2,
+        schedule3: req.body.schedule3
     };
 
     db.query('INSERT INTO film SET ?', postFilm, function (error) {
