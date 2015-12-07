@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
-
+var registerRouter = require('./controllers/register');
 var newsLetterRouter = require('./controllers/newsLetter');
 var aboutUsRouter = require('./controllers/aboutUs');
 var comingSoonRouter = require('./controllers/comingSoon');
@@ -35,11 +35,11 @@ app.set('view engine', 'hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use('/register', registerRouter);
 app.use('/news-letter', newsLetterRouter);
 app.use('/about-us', aboutUsRouter);
 app.use('/coming-soon', comingSoonRouter);
