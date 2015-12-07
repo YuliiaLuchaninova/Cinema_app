@@ -13,13 +13,13 @@ router.get('/', function (req, res, next) {
         else {
             console.log('success');
 
-            var fakeModel = {
+            var viewModel = {
                 title: 'About us',
                 layout: 'user-layout',
-                contacts: contacts
+                contacts: contacts[0]
             };
 
-            res.render('about-us', fakeModel);
+            res.render('about-us', viewModel);
         }
     })
 });

@@ -85,7 +85,11 @@ router.post("/edit-film/:id", upload.single('image'), function (req, res, next) 
         description: req.body.description,
         actors: req.body.actors,
         director: req.body.director,
-        YouTube: req.body.youtube
+        YouTube: req.body.youtube,
+        enddate: req.body.enddate,
+        schedule1: req.body.schedule1,
+        schedule2: req.body.schedule2,
+        schedule3: req.body.schedule3
     };
 
     db.query('UPDATE film SET ? WHERE id="' + req.params.id + '"', updatedFilm, function (error, updatedFilm) {

@@ -5,6 +5,24 @@ var express = require('express');
 var router = express.Router();
 var db = require('../mysql/dbConnection');
 
+
+router.get("/", function (req, res) {
+    db.query('SELECT * FROM address', function (error, contacts) {
+        if (error) {
+            console.log(error.message);
+        } else {
+            console.log('success');
+            var contactModel = {
+                layout: 'admin-layout',
+                contacts: contacts[0]
+
+            };
+            res.render('edit-about-us', contactModel);
+        }
+
+    });
+});
+
 router.post("/", function (req, res) {
 
     var postContacts = {
@@ -17,30 +35,22 @@ router.post("/", function (req, res) {
 
     };
 
-    db.query('INSERT INTO address SET ?', postContacts, function (error) {
+    db.query('TRUNCATE address', function (error, result) {
         if (error) {
             console.log(error.message);
-        } else {
-            console.log('success');
-            res.redirect('/admin');
-        }
-    });
-});
-
-router.get("/", function (req, res) {
-    db.query('SELECT * FROM address', function (error, contacts) {
-        if (error) {
-            console.log(error.message);
-        } else {
-            console.log('success');
-            var contactModel = {
-                layout: 'admin-layout',
-                contacts: contacts
-            };
-            res.render('edit-about-us', contactModel);
+            res.redirect('/edit-about-us');
         }
 
+        db.query('INSERT INTO address SET ?', postContacts, function (error, result) {
+            if (error) {
+                console.log(error.message);
+            } else {
+                res.redirect('/about-us');
+            }
+        });
+
     });
+
 });
 
 

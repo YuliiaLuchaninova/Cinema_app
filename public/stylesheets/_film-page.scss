@@ -21,6 +21,21 @@
 
 }
 
+.schedule {
+  background: linear-gradient(0deg, #059407, #072411);
+  width: 20%;
+  border-radius: 3px;
+  border: solid #072411 1px;
+  color: #ffffff;
+  &:hover {
+    background: linear-gradient(0deg, #F4982F, #592d0b);
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #9B5622, 0 0 1em #3f1f11;
+    border: solid 1px #592d0b;
+  }
+}
+
 .announcement {
   margin: 10px auto;
   max-width: 600px;

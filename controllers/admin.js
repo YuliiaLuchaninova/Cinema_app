@@ -28,7 +28,7 @@ router.get('/', function (req, res, next) {
                 var viewModel = {
                     layout: 'admin-layout',
                     filmList: filmList,
-                    contacts: contacts
+                    contacts: contacts[0]
                 };
                 res.render('admin', viewModel);
             });

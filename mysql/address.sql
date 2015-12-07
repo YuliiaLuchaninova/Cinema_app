@@ -6,5 +6,5 @@ CREATE TABLE address
     facebook VARCHAR(100) NOT NULL,
     twitter VARCHAR(100) NOT NULL,
     skype VARCHAR(100) NOT NULL,
-    map VARCHAR(100) NOT NULL
+    map VARCHAR(1000) NOT NULL
       );

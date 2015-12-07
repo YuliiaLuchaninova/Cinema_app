@@ -77,26 +77,26 @@
         <section id="contact" class="tab-content">
 
             <div class="col-xs-6 contacts">
-                <p>Address: {{adress}} </p>
+                <p>Address: {{contacts.address}} </p>
 
-                <p>Phone:{{phone}}</p>
+                <p>Phone: <a href="tel:{{contacts.phone}}">{{contacts.phone}}</a></p>
 
-                <p>Facebook group :{{facebook}}</p>
+                <p>Facebook group: <a href="{{contacts.facebook}}" target="_blank">Go to our Facebook page!!!</a></p>
 
-                <p>Twitter: {{twitter}}</p>
+                <p>Twitter: {{contacts.twitter}}</p>
 
-                <p>Skype : {{skype}}</p>
+                <p>Skype: {{contacts.skype}}</p>
             </div>
 
             <div class="col-xs-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.9661420912803!2d22.525213015284372!3d51.23811843817774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472259d5a5513d85%3A0xe0c4db85ceb62897!2sTomasza+Zana+39%2C+20-400+Lublin!5e0!3m2!1sru!2spl!4v1447951077219"
+                <iframe src="{{contacts.map}}"
                         class="map" allowfullscreen></iframe>
             </div>
             <div class="ctrl-block">
                 <a href="/edit-about-us" class="btn btn-default">
                     Edit
                 </a>
-
+            </div>
 
         </section>
         <section id="myProfile" class="tab-content">
@@ -177,50 +177,6 @@
     </div>
 </div>
 
-<!--<footer class="footer-block">-->
-<!--<div class="footer">-->
-<!--<ul class="footer-list">-->
-<!--<li class="footer-list-item">-->
-<!--<a href="http://www.dtcinemas.co.nz/">-->
-<!--<img src="../../images/cg_palmerston_rev.png" alt="">-->
-<!--</a>-->
-<!--</li>-->
-
-<!--<li class="footer-list-item">-->
-<!--<a href="http://www.dtcinemas.co.nz/">-->
-<!--<img src="../../images/cg_palmerston_rev.png">-->
-<!--</a>-->
-<!--</li>-->
-
-<!--<li class="footer-list-item">-->
-<!--<a href="http://www.dtcinemas.co.nz/">-->
-<!--<img src="../../images/dt_palmerston_rev.png">-->
-<!--</a>-->
-<!--</li>-->
-
-<!--<li class="footer-list-item">-->
-<!--<a href="http://www.dtcinemas.co.nz/">-->
-<!--<img src="../../images/dt_palmerston_rev.png">-->
-<!--</a>-->
-<!--</li>-->
-<!--</ul>-->
-
-<!--<p class="footer-copy">-->
-<!--Lublin 2015 <br>-->
-<!--Oleh Muts, Vladyslav Tehlivets, Yuliia Luchaninova, Mateusz Jaruga, Andrzej Materniak, Michal Debski-->
-<!--</p>-->
-<!--</div>-->
-
-
-<!--</footer>-->
-
-
-<!--</div>-->
-<!--</div>-->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bPopup/jquery.bpopup.min.js"></script>
 <script src="/javascripts/tabNavigation.js"></script>
-
-
-<!--</body>-->
-<!--</html>-->
