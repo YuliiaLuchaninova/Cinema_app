@@ -8,7 +8,7 @@ var day = new Date();
 var curDay = day.getDay();
 if (curDay === 0)
     curDay = 7;
-var daysLeft = curDay;
+var daysLeft = curDay + 7;
 
 router.get('/', function (req, res, next) {
     db.query('SELECT * FROM film WHERE CURDATE() + INTERVAL ' + daysLeft + ' DAY >= premiere AND CURDATE() + INTERVAL ' + daysLeft + ' DAY <= enddate', function (error, filmList) {
