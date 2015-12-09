@@ -116,48 +116,27 @@
                 <label for="schedule1" class="col-xs-4 control-label edit-form-label">Time of the show</label>
 
                 <div class="col-xs-4">
-                    <select class="form-control" id="schedule1" name="schedule1">
-                        <option>9:00</option>
-                        <option>11:00</option>
-                        <option>13:00</option>
-                        <option>15:00</option>
-                        <option>17:00</option>
-                        <option>19:00</option>
-                        <option>21:00</option>
-                        <option>23:00</option>
-                    </select>
+                    <input type="text" class="form-control schedule1" id="schedule1"
+                           name="schedule1" placeholder="__:__"
+                           value="{{filmItem.schedule1}}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="schedule2" class="col-xs-4 control-label edit-form-label"></label>
 
                 <div class="col-xs-4">
-                    <select class="form-control" id="schedule2" name="schedule2">
-                        <option>9:00</option>
-                        <option>11:00</option>
-                        <option>13:00</option>
-                        <option>15:00</option>
-                        <option>17:00</option>
-                        <option>19:00</option>
-                        <option>21:00</option>
-                        <option>23:00</option>
-                    </select>
+                    <input type="text" class="form-control schedule2" id="schedule2"
+                           name="schedule2" placeholder="__:__" required
+                           value="{{filmItem.schedule2}}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="schedule3" class="col-xs-4 control-label edit-form-label"></label>
 
                 <div class="col-xs-4">
-                    <select class="form-control" id="schedule3" name="schedule3">
-                        <option>9:00</option>
-                        <option>11:00</option>
-                        <option>13:00</option>
-                        <option>15:00</option>
-                        <option>17:00</option>
-                        <option>19:00</option>
-                        <option>21:00</option>
-                        <option>23:00</option>
-                    </select>
+                    <input type="text" class="form-control schedule3" id="schedule3"
+                           name="schedule3" placeholder="__:__" required
+                           value="{{filmItem.schedule3}}">
                 </div>
             </div>
 

@@ -17,7 +17,7 @@ var animator = (function () {
                 $(col[i]).animate({
                     left: parentWidth,
                     top: offsetTop
-                }, 5000);
+                }, 3000);
                 //Switch to next row
                 if (parentWidth <= 0) {
                     parentWidth = col[0].parentNode.offsetWidth;

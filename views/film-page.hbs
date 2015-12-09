@@ -22,10 +22,16 @@
 
                 <div class="row announcement"> {{description}}</div>
                 <div class="schedule-times">
-                    <h3>Choose your time:</h3>
-                    <a class="btn btn-default schedule" href="/booking-page/{{id}}" role="button">{{schedule1}}</a>
-                    <a class="btn btn-default schedule" href="/booking-page/{{id}}" role="button">{{schedule2}}</a>
-                    <a class="btn btn-default schedule" href="/booking-page/{{id}}" role="button">{{schedule3}}</a>
+                    <h3>Choose your day and time:</h3>
+                    <table>
+
+                        <a class="btn btn-default schedule" href="/booking-page/{{id}}/{{schedule1}}/hall1"
+                           role="button">{{schedule1}}</a>
+                        <a class="btn btn-default schedule" href="/booking-page/{{id}}/{{schedule2}}/hall1"
+                           role="button">{{schedule2}}</a>
+                        <a class="btn btn-default schedule" href="/booking-page/{{id}}/{{schedule3}}/hall1"
+                           role="button">{{schedule3}}</a>
+                    </table>
                 </div>
 
             </div>

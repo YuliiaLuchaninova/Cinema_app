@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
+var hall1Router = require('./controllers/hall');
 var registerRouter = require('./controllers/register');
 var newsLetterRouter = require('./controllers/newsLetter');
 var aboutUsRouter = require('./controllers/aboutUs');
@@ -39,6 +40,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/booking-page', hall1Router);
 app.use('/register', registerRouter);
 app.use('/news-letter', newsLetterRouter);
 app.use('/about-us', aboutUsRouter);

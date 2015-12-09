@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/hall-one.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="page-container">
+    <div class="page-body row">
+        <div class="page-navigation col-xs-3">
+            <ul class="nav-menu">
+                <li>
+                    <a href="/films/{{movie.id}}">{{date}}Date user checked</a>
+                </li>
+                <li> {{schedule}} </li>
+                <li class="title"> {{movie.title}}</li>
+                <li><img class="poster" src="{{movie.image}}"></li>
+
+                <li>Seat: {{seat}}Seat(s) user have chosen</li>
+                <li>Total price:</li>
+                <li>
+                    <button class="btn btn-default buy" type="submit">Buy</button>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="hall-markup col-xs-9">
+            <div class="screen"><p>screen </p></div>
+            <div class="rows-markup">
+                <ul class="rows" id="rows">
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">A</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+
+                            <div class="seat space"></div>
+
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+
+                            <div class="row-name hidden-xs hidden-sm">A</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">B</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat space"></div>
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">B</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">C</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat space"></div>
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">C</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">D</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat space"></div>
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">D</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">E</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat space"></div>
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">E</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">F</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat space"></div>
+                            <div class="seat"><p class="checked-seat">7</p></div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">F</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="seats a-row ">
+                            <div class="row-name">G</div>
+                            <div class="seat">
+                                <p class="checked-seat">1</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">2</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">3</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">4</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">5</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">6</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">7</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">8</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">9</p>
+                            </div>
+                            <div class="seat">
+                                <p class="checked-seat">10</p>
+                            </div>
+                            <div class="row-name hidden-xs hidden-sm">G</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="prices"><p>Price per 1 ticket {{movie.price}} $ </p></div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="/javascripts/seatsBooking"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

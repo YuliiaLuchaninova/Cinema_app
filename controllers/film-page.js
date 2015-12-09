@@ -6,6 +6,7 @@ var db = require('../mysql/dbConnection');
 router.get('/:id', function (req, res) {
 
     db.query('SELECT * from film where id = "' + req.params.id + '"', function (error, data) {
+
         var movie = data[0],
             options = {
                 year: 'numeric',

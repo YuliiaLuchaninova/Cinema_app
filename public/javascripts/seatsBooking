@@ -1,0 +1,11 @@
+var seat = document.getElementsByClassName('checked-seat');
+
+function bookingSeats() {
+
+    for (var i = 0; i < seat.length; i++) {
+        seat[i].onclick = function (event) {
+            event.target.classList.toggle("booked");
+        };
+    }
+}
+bookingSeats();
